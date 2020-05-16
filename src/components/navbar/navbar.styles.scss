@@ -1,0 +1,23 @@
+nav{
+    display: flex;
+    align-items: center;
+    width: 80%;
+
+    .nav-options{
+        width: 100%;
+        
+        .nav-list{
+            
+            list-style: none;
+            display: flex;
+            font-size: large;
+            font-family: "Open Sans Condensed";
+            justify-content: space-between;
+            bottom: 0;
+
+            .nav-item{
+                cursor: pointer;
+            }
+        }
+    }
+}
