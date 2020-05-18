@@ -13,6 +13,6 @@ const ItemPage = ({item}) => {
 }
 
 const mapStateToProps = (state, ownProps) => ({
-    item: selectItem(ownProps.match.params.categoryId, ownProps.match.params.itemId)(state)
+    item: selectItem(ownProps.match.params.collectionId, ownProps.match.params.itemId)(state)
 })
 export default connect(mapStateToProps)(ItemPage);

@@ -1,12 +1,11 @@
 import React from "react";
 import Item from "../item/item.component"
-import "./item-preview.styles.scss";
+import "./collection-preview.styles.scss";
 
-const ItemPreview = (category) => {
-    console.log(category)
-    const {title, items} = category;
+const CollectionPreview = (collection) => {
+    const {title, items} = collection;
     const itemsArray = Object.keys(items).map(item => items[item]);
-    return (<div className="item-preview"> 
+    return (<div className="collection-preview"> 
     
         <h1 className="title">{title.toUpperCase()}</h1>
         <div className="preview">
@@ -17,4 +16,4 @@ const ItemPreview = (category) => {
     </div>)
 }
 
-export default ItemPreview;
+export default CollectionPreview;

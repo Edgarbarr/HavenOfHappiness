@@ -3,24 +3,24 @@ import { selectCartItems } from "../cart/cart.selectors";
 
 const selectShop = (state) => state.shop;
 
-export const selectInventory = createSelector(
+export const selectCollections = createSelector(
   [selectShop],
-  (shop) => shop.inventory
+  (shop) => shop.collections
 );
 
-export const selectCategory = (categoryUrlParam) =>
-  createSelector([selectInventory], (inventory) => inventory[categoryUrlParam]);
+export const selectCollection = (collectionUrlParam) =>
+  createSelector([selectCollections], (collections) => collections[collectionUrlParam]);
 
-export const selectInventoryForPreview = createSelector(
-  [selectInventory],
-  (inventory) => Object.keys(inventory).map(key => inventory[key])
+export const selectCollectionsForPreview = createSelector(
+  [selectCollections],
+  (collections) => Object.keys(collections).map(key => collections[key])
 );
 
-export const selectCategoryForPreview = (categoryUrlParam) =>
-  createSelector([selectInventory], (inventory) => Object.keys(inventory[categoryUrlParam].items).map(key => inventory[categoryUrlParam].items[key]));
+export const selectCollectionItemsForPreview = (collectionUrlParam) =>
+  createSelector([selectCollections], (collections) => Object.keys(collections[collectionUrlParam].items).map(key => collections[collectionUrlParam].items[key]));
 
 
-export const selectItem = (categoryUrlParam, itemUrlParam) => createSelector(
-  [selectInventory],
-  (inventory) => inventory[categoryUrlParam].items[itemUrlParam]
+export const selectItem = (collectionUrlParam, itemUrlParam) => createSelector(
+  [selectCollections],
+  (collections) => collections[collectionUrlParam].items[itemUrlParam]
 )

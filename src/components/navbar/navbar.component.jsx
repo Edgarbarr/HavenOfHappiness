@@ -10,10 +10,10 @@ const NavBar = ({ sections, history, match }) => {
       <div></div>
       <div className="nav-options">
         <ul className="nav-list">
-          {sections.map((category) => {
-            const { linkUrl, title } = category;
+          {sections.map((collection) => {
+            const { linkUrl, title } = collection;
             return (
-              <li className="nav-item"key={category.id} onClick={() => history.push(`${match.url}${linkUrl}`)}>
+              <li className="nav-item"key={collection.id} onClick={() => history.push(`${match.url}${linkUrl}`)}>
                 {title}
               </li>
             );

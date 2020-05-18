@@ -17,21 +17,21 @@ const INITIAL_STATE = {
             title: "DESK BUDDY",
             imageUrl: "https://i.etsystatic.com/19638897/r/il/e4e921/2088607756/il_1588xN.2088607756_9f43.jpg",
             id: 3,
-            linkUrl: "shop/desk-buddy"
+            linkUrl: "shop/desk buddy"
         },
         {
             title: "POLYMER CLAY CHARMS",
             imageUrl: "https://i.etsystatic.com/19638897/r/il/2ccb4c/1997667599/il_1588xN.1997667599_lt5k.jpg",
             id: 4,
             size: "large",
-            linkUrl: "shop/polymer-clay-charms"
+            linkUrl: "shop/polymer clay charms"
         },
         {
             title: "RESIN CHARMS/KEYCHAIN",
             imageUrl: "https://i.etsystatic.com/19638897/r/il/f8c9a9/2298039248/il_794xN.2298039248_md9u.jpg",
             id: 5,
             size: "large",
-            linkUrl: "shop/resin-charms-keychain"
+            linkUrl: "shop/resin charms keychain"
         }
     ]
 }

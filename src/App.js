@@ -8,10 +8,10 @@ import { createStructuredSelector } from "reselect";
 import ShopPage from "./pages/shop/shop.component";
 import Header from "./components/header/header.component";
 import SignInAndSignUp from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
-import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
+import { auth, createUserProfileDocument, addCollectionAndDocuments } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
 import CheckoutPage from "./pages/checkout/checkout.component";
-
+import {selectCollectionsForPreview} from './redux/shop/shop.selectors';
 class App extends Component {
   unsubscribeFromAuth = null;
 
@@ -31,6 +31,7 @@ class App extends Component {
         });
       } else {
         setCurrentUser(userAuth);
+        // addCollectionAndDocuments('collections', collectionsArray.map(({title, items}) => ({title, items})))
       }
     });
   }
@@ -96,6 +97,7 @@ class App extends Component {
 }
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
+  collectionsArray: selectCollectionsForPreview
 });
 
 const mapDispatchToProps = (dispatch) => ({
