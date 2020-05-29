@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./App.css";
+import { GlobalStyle } from './global.styles';
 import HomePage from "./pages/homepage/homepage.component";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
@@ -19,6 +19,7 @@ const App = ({ checkUserSession, currentUser }) => {
  
   return (
     <div className="App">
+      <GlobalStyle/>
       <div className="quick-announcement">
         <a>FREE SHIPPING ON ORDERS $35 AND OVER</a>
       </div>

@@ -6,4 +6,17 @@
     .title {
         margin: 10px 0;
     }
+    @media screen and (max-width: 800px){
+        align-items: center;
+        
+    } 
+    .sign-up-form{
+        @media screen and (max-width: 800px){
+            :last-child{
+                margin: auto;
+            }
+            
+        }   
+    }
+    
 }

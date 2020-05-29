@@ -32,16 +32,29 @@
         background-color: rgba(253, 209, 217, 0.616);
         border: none;
         box-shadow: 0 5px 25px grey;
+        @media screen and (max-width: 800px){
+            flex-direction: column;
+            width: 90vw;
+            height: 5vh;
+            margin: 2px 0;
+        }
         
 
         option {
             color: red;
             width: 200px;
+            @media screen and (max-width: 800px){
+                width: 50vw;
+                text-align: center;
+            }
         }
         option[selected="selected"] {
             background-color: blue;
         }
     }
 
-
+    @media screen and (max-width: 800px){
+        width: 90vw;
+        text-align: center;
+    }
 }

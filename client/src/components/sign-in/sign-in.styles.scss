@@ -10,5 +10,16 @@
     .buttons {
         display: flex;
         justify-content: space-between;
+        @media screen and (max-width: 800px){
+            justify-content: center;
+            flex-direction: column;
+            :first-child{
+                margin: 10px 0;
+            }
+            
+        }
+    }
+    @media screen and (max-width: 800px){
+        align-items: center;
     }
 }

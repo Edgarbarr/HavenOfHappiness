@@ -1,7 +1,5 @@
 .homepage {
 
-
-
     .banner-container{
       display: flex;
       width: 100%;
@@ -11,8 +9,6 @@
       flex-direction: column;
       justify-content: center;
       
-      
-
       .banner-image{
         position: absolute;
         width: 100%;
@@ -23,6 +19,10 @@
       }
       .banner-title, .banner-description{
         padding-left: 40px;
+        @media screen and (max-width: 800px){
+          padding-left: unset;
+      }
+        
       }
 
       .banner-title {
@@ -35,8 +35,11 @@
         bottom: auto;
       }
     }
-
+    @media screen and (max-width: 800px){
+      text-align: center;
   }
+
+}
   
   
   

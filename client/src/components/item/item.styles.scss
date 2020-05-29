@@ -5,6 +5,8 @@
     height: 350px;
     align-items: center;
     position: relative;
+    margin-bottom: 30px;
+    
     
  
     .image {
@@ -22,6 +24,12 @@
         position: absolute;
         top: 255px;
         display: none;
+        @media screen and (max-width: 800px){
+            display: block;
+            opacity: 0.9;
+            min-width: unset;
+            padding: 0 10px 0 10px;
+        }
     }
     &:hover {
         .image {
@@ -48,4 +56,16 @@
         width: 15%;
         margin-bottom: 15px;
     }
+    @media screen and (max-width: 800px){
+        width: 80vw; 
+        &:hover {
+            .image {
+                opacity: unset;
+            }
+            .custom-button {
+                opacity: unset;
+                display: flex;
+            }
+        }
+      }
 }
